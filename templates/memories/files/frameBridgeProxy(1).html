@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0110)http://testdaily.diandian.com/frameBridgeProxy.html?v=2#type=2|width=500|dtid=SuM52QCiY6dQBdnYtDtZ2jfHjiCLglnZ -->
+<html><script type="text/javascript" src="chrome-extension://kajfghlhfkcocafkcjlajldicbikpgnp/catcher.js"><!-- script injected by Request Maker --></script><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Frame Proxy</title>
+<script>
+(function(){
+try{
+    var hostWindow = parent.parent;
+    function G(type, id){
+        var t = {
+            "1" : "diandian_comments",
+            "2" : "diandian_controls"
+        };
+        id = id ? id : t[type];
+
+        return hostWindow.document.getElementById(id);
+    }
+    function getHashParams(){
+        var params = location.hash.match(/#?(.+)$/), data = {
+            type : 1
+        };
+        if(params){
+            params = params[1].split("|");
+            for(var i= 0,l=params.length;i<l;i+=1){
+                var j = params[i].split("=");
+                if(j.length == 2){
+                    data[j[0]] = j[1];
+                }
+            }
+        }
+        return data;
+    }
+    var hashData = getHashParams(),
+        target = G(hashData.type, hashData.iframe_id);
+    if(hashData.width){
+        target.setAttribute("width", hashData.width);
+    }
+    if(hashData.height){
+        target.setAttribute("height", hashData.height);
+    }
+    if((typeof hostWindow.__callback_diandian_notes_resize) == 'function' &&
+        hashData.type == 1){
+        hostWindow.__callback_diandian_notes_resize(hashData.height);
+    }
+    if(hashData.dtid && hashData.type == 2){
+        hostWindow._DD_TRACE = hostWindow._DD_TRACE || {};
+        hostWindow._DD_TRACE.dtid = hashData.dtid;
+        hostWindow._DD_TRACE.feedid = hashData.feedid;
+        if ((typeof hostWindow._DD_TRACE.Tracker) == 'function') {
+            hostWindow._DD_TRACE.Tracker('pv');
+        }
+    }
+    hostWindow.document.getElementById('diandian_controls').style.zoom = '1';
+}catch(ex){}
+})();
+</script>
+</head>
+<body>
+
+
+</body></html>

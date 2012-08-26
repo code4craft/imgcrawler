@@ -1,0 +1,22 @@
+.rich-content .edui-filter-underline{text-decoration: underline !important;}
+.rich-content .edui-filter-line-through{text-decoration: line-through !important;}
+.rich-content .edui-filter-decoration-none{text-decoration: none;}
+
+.rich-content ol li{list-style-type: decimal !important;}
+.rich-content ol.edui-filter-decimal li{list-style-type: decimal !important;}
+.rich-content ol.edui-filter-lower-alpha li{list-style-type: lower-alpha !important;}
+.rich-content ol.edui-filter-lower-roman li{list-style-type: lower-roman !important;}
+.rich-content ol.edui-filter-upper-alpha li{list-style-type: upper-alpha !important;}
+.rich-content ol.edui-filter-upper-roman li{list-style-type: upper-roman !important;}
+.rich-content ul li{list-style-type: disc !important;}
+.rich-content ul.edui-filter-disc li{list-style-type: disc !important;}
+.rich-content ul.edui-filter-square li{list-style-type: square !important;}
+.rich-content ul.edui-filter-circle li{list-style-type: circle !important;}
+.rich-content .text-img-holder {display:block;}
+
+.rich-content .edui-filter-align-center{text-align:center !important;}
+.rich-content .edui-filter-align-left{text-align:left !important;}
+.rich-content .edui-filter-align-right{text-align:right !important;}
+
+.rich-content pre {font-family: monospace; word-wrap:break-word;}
+.rich-content pre p {margin:0;}

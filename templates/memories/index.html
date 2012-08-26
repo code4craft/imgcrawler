@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://testdaily.diandian.com/ -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en">
+<script type="text/javascript" src="./files/jquery.js"></script>
+  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title><!title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./files/E9D0B.css">
+  <link rel="stylesheet" type="text/css" href="./files/rich-content.css">
+  <script src="./files/CBB3E.js"></script>  <!-- fancybox -->
+  <link rel="stylesheet" type="text/css" href="./files/jquery.fancybox.css">
+  <script src="./files/jquery.fancybox.pack.js"></script>  <style>
+  body{
+    background-color:#333333;
+  }
+
+  .post .post-inner img{
+      opacity: 0.20;
+      -moz-opacity: 0.20;
+      filter:alpha(opacity=20);
+  }
+  .post:hover .post-inner img{
+      opacity: 1;
+      -moz-opacity: 1;
+      filter:alpha(opacity=1);
+      width:160px;
+  }
+  
+  </style>
+</head>
+<body>
+  <div id="wrap">
+  <header class="clearfix">  <!-- 头部 -->
+  </header>
+  <div role="main" id="main">
+      <!-- 列表页面 -->
+      
+      <!-- 容器 -->
+      <div id="post-list-container" class="clearfix">
+        <!-- 有文章 -->
+        
+        <!-- 循环文章 -->
+          
+            <!content>
+
+          
+            
+      </div>
+      <!--end 容器 -->
+      
+      <!--end 列表页面 -->
+
+      
+    
+      <!-- end文章 -->
+  </div><!--end main-->
+  <footer class="clearfix">
+    
+    <div id="pagination">
+    <!-- 循环页码 -->
+
+      <ul class="pagination-list">
+      
+
+      
+      </ul>
+
+    </div>
+    
+  </footer>
+  </div>
+  <!-- scripts concatenated and minified via build script -->
+  <script defer="" src="./files/57F22.js"></script>  <script type="text/javascript">
+
+    (function($,undefined){
+      $(function(){
+    
+        $('#post-list-container div.post-inner').each(fadeIn);
+    
+        $('#post-list-container')
+        .delegate('div.post','mouseenter',function(ev){
+          $('div.post-list-link',ev.currentTarget).fadeIn(100);
+        })
+        .delegate('div.post','mouseleave',function(ev){
+          $('div.post-list-link',ev.currentTarget).fadeOut(100);
+        });
+
+          
+          var loading = false, page = 2, noMore = false,
+              loc = window.location, host = loc.host,
+              search = loc.search, proto = loc.protocol;
+              
+          if($(window).height() >= $(document).height()){
+              getData();
+          }
+          
+          $(window).bind('scroll', function(){
+              var rest = $(document).height() - $(window).scrollTop() - $(window).height();
+        
+              if(rest < 250){
+                  getData();
+              }
+          });
+          
+    
+        $('#post-single .fancybox').fancybox({
+                openEffect: 'elastic',
+                closeEffect: 'elastic',
+                margin: 50,
+                padding: 10
+            });
+    
+    
+            function fadeIn(index,item){
+          var per = 160;
+          var t = index * per;
+          setTimeout(function(){
+                    $(item).show();
+                    $(item).find('img').imgCenter();
+                    $(item).hide();
+            $(item).fadeIn(500);
+          },t);
+        }
+      });
+    })(jQuery);
+  </script>  <!-- end scripts -->
+
+
+<iframe src="./files/acl.html" width="0" height="0" frameborder="0"></iframe><script type="text/javascript">
+
+  var _ddgaq = _ddgaq || [];
+  _ddgaq.push(['DDGAT._setAccount', 'UA-30555696-1']);
+  _ddgaq.push(['DDGAT._setDomainName', '.diandian.com']);
+
+_ddgaq.push(['DDGAT._setAllowLinker', true]);
+  _ddgaq.push(['DDGAT._addOrganic', 'baidu', 'word']);
+  _ddgaq.push(['DDGAT._addOrganic', 'soso', 'w']);
+  _ddgaq.push(['DDGAT._addOrganic', 'youdao', 'q']);
+  _ddgaq.push(['DDGAT._addOrganic', 'sogou', 'query']);
+  _ddgaq.push(['DDGAT._trackPageview']);
+
+
+</script>
+
+</body></html>
